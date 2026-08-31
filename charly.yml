@@ -1,7 +1,7 @@
 version: 2026.232.0520
 desktop-media:
     candy:
-        version: 2026.149.1210
+        version: 2026.243.1038
         description: |
             Desktop media codecs, thumbnailers, and the ALSA<->PipeWire bridge for a KDE workstation
             Installs the GStreamer plugin set (libav/bad/ugly/va/pipewire) so Plasma,
@@ -14,7 +14,7 @@ desktop-media:
             lands a known binary, an unsonamed plugin .so, or a config drop-in, so
             each scenario below is a deterministic file/package check.
         require:
-            - '@github.com/opencharly/pod-pipewire:v2026.235.2110'
+            - '@github.com/opencharly/pod-pipewire:v2026.243.0508'
         distro:
             arch:
                 package:
