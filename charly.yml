@@ -1,7 +1,5 @@
-version: 2026.232.0520
 desktop-media:
     candy:
-        version: 2026.243.1038
         description: |
             Desktop media codecs, thumbnailers, and the ALSA<->PipeWire bridge for a KDE workstation
             Installs the GStreamer plugin set (libav/bad/ugly/va/pipewire) so Plasma,
