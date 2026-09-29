@@ -3,7 +3,7 @@
 Standalone candy repo for the `desktop-media` layer — the GStreamer/VLC codec
 set, thumbnailer libs, and the ALSA↔PipeWire bridge for a KDE workstation. The
 candy lives in `charly.yml` at the repo root: the `require:` dep on
-`layer-pipewire`, the `arch` package arm, and the `plan:` file/package `check:`
+`pod-pipewire`, the `arch` package arm, and the `plan:` file/package `check:`
 steps. It carries an owning `desktop-media-skill:` entity, projected as
 `/charly-selkies:desktop-media`.
 
