@@ -19,7 +19,7 @@ deterministic file or package check.
 | Property | Value |
 |---|---|
 | Layer / candy | `desktop-media` |
-| Requires | `layer-pipewire` (`@github.com/opencharly/pod-pipewire`) |
+| Requires | `pod-pipewire` (`@github.com/opencharly/pod-pipewire`) |
 | Distro | `arch` only |
 | Binaries | `/usr/bin/pavucontrol`, `/usr/bin/ffmpegthumbnailer`, `/usr/bin/aplay` |
 | Plugins | `/usr/lib/gstreamer-1.0/libgstlibav.so`, `/usr/lib/gstreamer-1.0/libgstva.so` |
@@ -58,7 +58,9 @@ pavucontrol --version
 
 ## Related
 
-- Family skill: `/charly-selkies:pipewire` — the PipeWire audio/media server the
+- Owning skill: `/charly-selkies:desktop-media` — this layer's codec set,
+  thumbnailers, and ALSA↔PipeWire bridge
+- Audio server: `/charly-selkies:pipewire` — the PipeWire audio/media server the
   ALSA bridge routes through
 - Codecs: `/charly-selkies:ffmpeg` — the transcoder stack used by downstream media
   consumers

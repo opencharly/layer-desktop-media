@@ -3,31 +3,31 @@
 Standalone candy repo for the `desktop-media` layer — the GStreamer/VLC codec
 set, thumbnailer libs, and the ALSA↔PipeWire bridge for a KDE workstation. The
 candy lives in `charly.yml` at the repo root: the `require:` dep on
-`layer-pipewire`, the `arch` package arm, and the `plan:` file/package `check:`
-steps. It carries **no `skill:` entity**, so no owning `/charly-<family>:<name>`
-skill is projected into the marketplace corpus.
+`pod-pipewire`, the `arch` package arm, and the `plan:` file/package `check:`
+steps. It carries an owning `desktop-media-skill:` entity, projected as
+`/charly-selkies:desktop-media`.
 
 Canonical files:
 
-- `charly.yml` — the `desktop-media:` candy entity (no `skill:` entity present).
+- `charly.yml` — the `desktop-media:` candy entity and its `desktop-media-skill:`
+  skill entity.
 - `CHANGELOG/` — per-CalVer release history.
 - `.github/workflows/tag-on-merge.yml` — CalVer tag + `CHANGELOG/` on merge.
 - `README.md` — user overview only; never agent guidance.
 
 ## Load these skills first (R0)
 
-- `/charly-selkies:pipewire` — the closest owning skill: the PipeWire audio/media
-  server the candy's ALSA bridge routes through. Load before editing or
-  troubleshooting the layer.
+- `/charly-selkies:desktop-media` — the owning skill: the KDE workstation media
+  stack (GStreamer/VLC codecs, thumbnailers, the ALSA↔PipeWire bridge), its
+  packages, and the `plan:` checks that prove them. Load before editing,
+  building, or troubleshooting the layer.
+- `/charly-selkies:pipewire` — the PipeWire audio/media server the candy's ALSA
+  bridge routes through.
 - `/charly-selkies:ffmpeg` — the transcoder stack (negativo17 nonfree build) used
   by downstream media consumers. Load when changing codec claims.
 - `/charly-image:layer` — the candy authoring reference (`charly.yml` schema,
   `plan:` step verbs incl. `check:`, per-distro `distro:` arms, package sections).
   Load before editing any entity field or plan step.
-
-There is no dedicated `/charly-*:desktop-media` owning skill — this repo's candy
-carries no `skill:` entity. The gap is recorded against
-`opencharly/opencharly#291`; when one is authored, add it here.
 
 ## Build / validate / test
 
