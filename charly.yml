@@ -12,7 +12,7 @@ desktop-media:
             lands a known binary, an unsonamed plugin .so, or a config drop-in, so
             each scenario below is a deterministic file/package check.
         require:
-            - '@github.com/opencharly/pod-pipewire:v2026.243.0508'
+            - '@github.com/opencharly/pod-pipewire:v2026.273.1856'
         distro:
             arch:
                 package:
